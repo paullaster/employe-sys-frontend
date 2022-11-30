@@ -1,13 +1,10 @@
 import './App.css';
-import Form from './components/Form';
-import LabelInput from './components/LabelIpunt';
+import CreateDatabase from './components/DCL/CreateDatabse';
 
 
 const App = () => {
   return (
-    <Form>
-      <LabelInput />
-    </Form>
+    <CreateDatabase />
   );
 }
 
