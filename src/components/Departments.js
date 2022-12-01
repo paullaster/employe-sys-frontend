@@ -1,2 +1,6 @@
-const Departments = () => {};
+const Departments = () => {
+    return (
+        
+    )
+};
 export default Departments;
