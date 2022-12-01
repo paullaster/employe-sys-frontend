@@ -3,6 +3,7 @@ import Departments from './components/Departments';
 import {useState, useEffect} from 'react';
 import Staff from './components/Staff';
 import DeleteModal from './components/DeleteModal';
+import DeleteDeptModal from './components/DeleteDeptModal';
 
 
 
@@ -90,12 +91,33 @@ const handleDeleteApi = () => {
   });
 };
 
+const handleDeleteApi = () => {
+   
+  fetch ('http://localhost:4000/staff/delete', {
+    method: 'DELETE',
+    headers:{
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({staffId: inputValue})
+  })
+  .then ( (resp) =>{
+    return resp.json();
+  })
+  .then ( (data) => {
+    console.log (data);
+  } )
+  .catch ( (error) => {
+    setIsError (true)
+  });
+};
+
 
   return (
     <>
     <Staff staffs={staffs} onClick={handleDelete}/>
     <Departments departments = {departments}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
+    {openDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     </>
   );
 }
