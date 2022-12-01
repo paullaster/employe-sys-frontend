@@ -11,7 +11,8 @@ const App = () => {
 
 const [departments, setDepartments] = useState ([]);
 const [staffs, setStaffs] = useState ([]);
-const [openDeleteModel, setDeleteModel] =  useState(false)
+const [openDeleteModel, setDeleteModel] =  useState(false);
+
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -61,6 +62,9 @@ const handleDelete = () => {
   setDeleteModel (true);
 };
 
+const handleCloseModal = () => {
+  setDeleteModel (false);
+};
 const handleDeleteApi = () => {
   fetch ('http://localhost:4000/staff/delete', {
     method: 'DELETE',
@@ -84,7 +88,7 @@ const handleDeleteApi = () => {
     <>
     <Staff staffs={staffs} onClick={handleDelete}/>
     <Departments departments = {departments}/>
-    {openDeleteModel && <DeleteModal  />}
+    {openDeleteModel && <DeleteModal closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     </>
   );
 }
