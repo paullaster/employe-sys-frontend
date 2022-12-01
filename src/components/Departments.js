@@ -13,7 +13,7 @@ const Departments = ({ departments }) => {
         <THeadItem>Departments Manager</THeadItem>
       </Table>
 
-      <Button type="creaate">add department</Button>
+      <Button type="create">Add department</Button>
       <Button type="update">update department</Button>
       <Button type="delete">Delete department</Button>
     </>

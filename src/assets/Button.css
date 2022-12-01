@@ -10,3 +10,13 @@ button[type=delete]{
     color: aliceblue;
     font-size: 20px !important;
 }
+button[type=create]{
+    background-color: rgb(9, 178, 20);
+    color: aliceblue;
+    font-size: 20px !important;
+}
+button[type=create]{
+    background-color: rgb(9, 178, 20);
+    color: aliceblue;
+    font-size: 20px !important;
+}

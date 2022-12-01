@@ -16,10 +16,10 @@ const Staff = ({staffs}) => {
         <THeadItem>Manager</THeadItem>
         <THeadItem>Start Date</THeadItem>
     </StaffTable>
-    <Button>
-        create new staff
+    <Button type="create">
+        Create new staff
     </Button>
-    <Button>
+    <Button type="update">
         update staff details
     </Button>
     <Button type="delete">
