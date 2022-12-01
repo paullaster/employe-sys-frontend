@@ -1,6 +1,8 @@
-const Departments = ({depaartment}) => {
+const Departments = ({department}) => {
     return (
-        
+        <div>
+            {department}
+        </div>
     )
 };
 export default Departments;

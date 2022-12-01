@@ -7,8 +7,16 @@ import {useState, useEffect} from 'react';
 
 const App = () => {
 
+
 const [department, setDepartment] = useState ([]);
 
+const fetchDepartments = () => {
+  fetch
+};
+
+useEffect ( () => {
+
+}, [])
 
   return (
     <>
