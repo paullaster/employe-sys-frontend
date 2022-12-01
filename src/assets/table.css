@@ -1,13 +1,24 @@
+table{
+    width: 1100px !important;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+    margin-left: 70px !important;
+    margin-top: 30px !important;
+    height: 70vh !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+}
 table, th, td {
     border: 1px solid #ccc;
     border-collapse: collapse;
     margin: 50px;
+    
 }
 th, td{
     width: auto !important;
     padding: 4px 12px !important;
 }
 caption{
+    margin-bottom: 30px;
     font-weight: 900;
     font-size: 30px;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

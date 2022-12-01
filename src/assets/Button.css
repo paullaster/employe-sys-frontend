@@ -3,7 +3,8 @@ button {
     height: 7vh;
     border-radius: 10px;
     margin: 4px;
-    border: none !important;;
+    border: none !important;
+    margin-left: 60px !important;
 }
 button[type=delete]{
     background-color: rgb(178, 9, 9);

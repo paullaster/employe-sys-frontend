@@ -3,7 +3,11 @@ import THeadItem from "./THeadItem";
 import Button from "./Button";
 import '../assets/Button.css'
 const Staff = ({staffs}) => {
+
+ 
+ const handleStaffDelete = () => {
     
+ }
 
   return (
     <>
