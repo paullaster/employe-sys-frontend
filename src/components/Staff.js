@@ -1,8 +1,15 @@
+import Form from "./Form";
 import StaffTable from "./StaffTable";
 import THeadItem from "./THeadItem";
+import LabelInput from "./LabelIpunt";
+import Button from "./Button";
 
 const Staff = ({staffs}) => {
   return (
+    <>
+    <Button>
+        Create new staff
+    </Button>
     <StaffTable inputData={staffs} caption="Employee Information">
         <THeadItem>Name</THeadItem>
         <THeadItem>Title</THeadItem>
@@ -12,6 +19,7 @@ const Staff = ({staffs}) => {
         <THeadItem>Manager</THeadItem>
         <THeadItem>Start Date</THeadItem>
     </StaffTable>
+    </>
   );
 };
 export default Staff;
