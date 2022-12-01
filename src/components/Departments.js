@@ -14,7 +14,7 @@ const Departments = ({ departments }) => {
       </Table>
 
       <Button type="create">Add department</Button>
-      <Button type="update">update department</Button>
+      <Button type="update">Update department</Button>
       <Button type="delete">Delete department</Button>
     </>
   );

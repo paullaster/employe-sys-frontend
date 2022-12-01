@@ -61,8 +61,8 @@ useEffect ( () => {
 
   return (
     <>
-     <Departments departments = {departments}/>
-     <Staff staffs={staffs}/>
+    <Staff staffs={staffs}/>
+    <Departments departments = {departments}/>
     </>
   );
 }

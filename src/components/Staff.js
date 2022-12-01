@@ -20,7 +20,7 @@ const Staff = ({staffs}) => {
         Create new staff
     </Button>
     <Button type="update">
-        update staff details
+        Update staff details
     </Button>
     <Button type="delete">
         Delete staff
