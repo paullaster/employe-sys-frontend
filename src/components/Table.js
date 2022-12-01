@@ -1,4 +1,5 @@
-const Table = () => {
+import TBodyItem from "./TBodyItem";
+const Table = ({departments}) => {
     return (
         <table>
             <thead>
@@ -9,7 +10,11 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                
+                {
+                    departments.map ( (department) => {
+                        <TBodyItem key={department.deptId} department={department}/>
+                    })
+                }
             </tbody>
         </table>
     );
