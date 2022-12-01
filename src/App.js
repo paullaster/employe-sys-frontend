@@ -10,6 +10,7 @@ const App = () => {
 
 const [departments, setDepartments] = useState ([]);
 const [staffs, setStaffs] = useState ([]);
+
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -53,7 +54,10 @@ const fetchStaffs = () => {
 useEffect ( () => {
   fetchDepartments ();
   fetchStaffs ();
-}, [])
+}, []);
+
+
+
 
   return (
     <>

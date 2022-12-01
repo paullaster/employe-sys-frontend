@@ -1,13 +1,15 @@
-import Form from "./Form";
 import StaffTable from "./StaffTable";
 import THeadItem from "./THeadItem";
-import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 
 const Staff = ({staffs}) => {
+    const handleAddNewStaff = () => {
+        alert("Please");
+    };
+
   return (
     <>
-    <Button>
+    <Button onClick={handleAddNewStaff}>
         Create new staff
     </Button>
     <StaffTable inputData={staffs} caption="Employee Information">
