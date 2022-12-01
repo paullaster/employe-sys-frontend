@@ -10,6 +10,14 @@
     height: 25vh;
     padding: 10px;
 }
+.modal-container-dept{
+    position: absolute;
+    background-color: bisque !important;
+    top: -25em;
+    left: 40% !important;
+    height: 25vh;
+    padding: 10px;
+}
 .modal-footer button {
     width: 50% !important;
     margin-top: 10px;

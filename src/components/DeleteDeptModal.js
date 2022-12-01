@@ -6,13 +6,13 @@ import '../assets/model.css'
 const DeleteDeptModal = ({handleChange, closeModel, callDeleteApi}) => {
   return (
     <div className="modal">
-      <div className="modal-container">
+      <div className="modal-container-dept">
         <div className="modal-header">
           <div className="closeModel" onClick={closeModel}>&times;</div>
         </div>
         <div className="modal-body">
           <Form>
-            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
+            <LabelInput handleChange={handleChange}>Enter Department ID to delete</LabelInput>
           </Form>
         </div>
         <div className="modal-footer">

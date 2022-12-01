@@ -13,6 +13,7 @@ const App = () => {
 const [departments, setDepartments] = useState ([]);
 const [staffs, setStaffs] = useState ([]);
 const [openDeleteModel, setDeleteModel] =  useState(false);
+const [openDeptDeleteModel, setDeptDeleteModel] =  useState(false);
 const [inputValue, setInputValue] = useState([]);
 const [isError, setIsError] = useState ( false);
 
@@ -66,10 +67,12 @@ const handleChange = (event) => {
 
 const handleDelete = () => {
   setDeleteModel (true);
+  setDeptDeleteModel (true);
 };
 
 const handleCloseModal = () => {
   setDeleteModel (false);
+  setDeptDeleteModel (false);
 };
 const handleDeleteApi = () => {
    
@@ -115,9 +118,9 @@ const handleDeptDeleteApi = () => {
   return (
     <>
     <Staff staffs={staffs} onClick={handleDelete}/>
-    <Departments departments = {departments}/>
+    <Departments departments = {departments} onClick={handleDelete}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
-    {openDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
+    {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
     </>
   );
 }
