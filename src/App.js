@@ -185,7 +185,7 @@ const handleDeptIdUpdateChange = (event) => {
 };
   return (
     <>
-    <Staff staffs={staffs} onClick={handleDelete}/>
+    <Staff staffs={staffs} update={handleStaffUpdate} onClick={handleDelete}/>
     <Departments departments = {departments} onClick={handleDeptDelete}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
