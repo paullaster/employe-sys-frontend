@@ -1,5 +1,6 @@
 import TBodyItem from "./TBodyItem";
-const Table = ({ departments, caption = "Table", children }) => {
+import {v4 as uuidv4} from 'uuid';
+const Table = ({ inputData, caption = "Table", children }) => {
   return (
     <table>
       <caption>
@@ -11,8 +12,8 @@ const Table = ({ departments, caption = "Table", children }) => {
         </tr>
       </thead>
       <tbody>
-        {departments.map(department => {
-          return <TBodyItem key={department.deptId} department={department} />;
+        {inputData.map(data => {
+          return <TBodyItem key={uuidv4 ()} data={data} />;
         })}
       </tbody>
     </table>

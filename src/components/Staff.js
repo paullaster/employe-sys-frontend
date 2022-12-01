@@ -3,7 +3,7 @@ import THeadItem from "./THeadItem";
 
 const Staff = ({staffs}) => {
   return (
-    <Table>
+    <Table inputData={staffs} caption="Employee Information">
         <THeadItem>Staff ID</THeadItem>
         <THeadItem>Name</THeadItem>
         <THeadItem>Title</THeadItem>
