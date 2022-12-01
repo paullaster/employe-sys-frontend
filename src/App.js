@@ -61,6 +61,24 @@ const handleDelete = () => {
   setDeleteModel (true);
 };
 
+const handleDeleteApi = () => {
+  fetch ('http://localhost:4000/staff/delete', {
+    method: 'DELETE',
+    headers:{
+      "Content-Type":"application/json"
+    }
+  })
+  .then ( (resp) =>{
+    return resp.json();
+  })
+  .then ( (data) => {
+    console.log (data);
+  } )
+  .catch ( (error) => {
+    setIsError (true)
+  });
+};
+
 
   return (
     <>
