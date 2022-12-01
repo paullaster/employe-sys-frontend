@@ -1,0 +1,12 @@
+button {
+    width: 200px;
+    height: 7vh;
+    border-radius: 10px;
+    margin: 4px;
+    border: none !important;;
+}
+button[type=delete]{
+    background-color: rgb(178, 9, 9);
+    color: aliceblue;
+    font-size: 20px !important;
+}

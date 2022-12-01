@@ -1,14 +1,12 @@
 import StaffTable from "./StaffTable";
 import THeadItem from "./THeadItem";
 import Button from "./Button";
+import '../assets/Button.css'
 const Staff = ({staffs}) => {
     
 
   return (
     <>
-    <Button>
-        Create new staff
-    </Button>
     <StaffTable inputData={staffs} caption="Employee Information">
         <THeadItem>Name</THeadItem>
         <THeadItem>Title</THeadItem>
@@ -18,6 +16,15 @@ const Staff = ({staffs}) => {
         <THeadItem>Manager</THeadItem>
         <THeadItem>Start Date</THeadItem>
     </StaffTable>
+    <Button>
+        create new staff
+    </Button>
+    <Button>
+        update staff details
+    </Button>
+    <Button type="delete">
+        Delete staff
+    </Button>
     </>
   );
 };

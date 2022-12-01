@@ -1,21 +1,22 @@
 import Table from "./Table";
 import THeadItem from "./THeadItem";
-import Form from  "./Form"
-import LabelInput from './LabelIpunt';
 import Button from "./Button";
+import '../assets/Button.css'
 
-const Departments = ({departments}) => {
-    return (
-        <>
-        <Button>
-            Add new Department
-        </Button>
-        <Table inputData={departments} caption="Department Records">
-            <THeadItem>Departments ID</THeadItem>
-          <THeadItem>Departments Name</THeadItem>
-          <THeadItem>Departments Manager</THeadItem>
-        </Table>
-        </>
-    )
+
+const Departments = ({ departments }) => {
+  return (
+    <>
+      <Table inputData={departments} caption="Department Records">
+        <THeadItem>Departments ID</THeadItem>
+        <THeadItem>Departments Name</THeadItem>
+        <THeadItem>Departments Manager</THeadItem>
+      </Table>
+
+      <Button type="creaate">add department</Button>
+      <Button type="update">update department</Button>
+      <Button type="delete">Delete department</Button>
+    </>
+  );
 };
 export default Departments;
