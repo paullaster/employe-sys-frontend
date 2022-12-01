@@ -91,14 +91,14 @@ const handleDeleteApi = () => {
   });
 };
 
-const handleDeleteApi = () => {
+const handleDeptDeleteApi = () => {
    
-  fetch ('http://localhost:4000/staff/delete', {
+  fetch ('http://localhost:4000/dept/delete', {
     method: 'DELETE',
     headers:{
       "Content-Type":"application/json"
     },
-    body: JSON.stringify({staffId: inputValue})
+    body: JSON.stringify({deptId: inputValue})
   })
   .then ( (resp) =>{
     return resp.json();
@@ -117,7 +117,7 @@ const handleDeleteApi = () => {
     <Staff staffs={staffs} onClick={handleDelete}/>
     <Departments departments = {departments}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
-    {openDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
+    {openDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
     </>
   );
 }
