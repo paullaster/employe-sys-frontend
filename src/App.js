@@ -12,7 +12,7 @@ const App = () => {
 const [departments, setDepartments] = useState ([]);
 const [staffs, setStaffs] = useState ([]);
 const [openDeleteModel, setDeleteModel] =  useState(false);
-
+const [inputValue, setInputValue] = useState([]);
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -56,7 +56,12 @@ const fetchStaffs = () => {
 useEffect ( () => {
   fetchDepartments ();
   fetchStaffs ();
-}, []);
+}, [staffs, departments ]);
+
+
+const handleChange = (event) => {
+  setInputValue (event.target.value);
+};
 
 const handleDelete = () => {
   setDeleteModel (true);
@@ -66,11 +71,13 @@ const handleCloseModal = () => {
   setDeleteModel (false);
 };
 const handleDeleteApi = () => {
+   
   fetch ('http://localhost:4000/staff/delete', {
     method: 'DELETE',
     headers:{
       "Content-Type":"application/json"
-    }
+    },
+    body: JSON.stringify({staffId: inputValue})
   })
   .then ( (resp) =>{
     return resp.json();
@@ -88,7 +95,7 @@ const handleDeleteApi = () => {
     <>
     <Staff staffs={staffs} onClick={handleDelete}/>
     <Departments departments = {departments}/>
-    {openDeleteModel && <DeleteModal closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
+    {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     </>
   );
 }

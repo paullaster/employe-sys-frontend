@@ -3,7 +3,7 @@ import Form from "./Form";
 import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 import '../assets/model.css'
-const DeleteModal = ({closeModel, callDeleteApi}) => {
+const DeleteModal = ({handleChange, closeModel, callDeleteApi}) => {
   return (
     <div className="modal">
       <div className="modal-container">
@@ -12,7 +12,7 @@ const DeleteModal = ({closeModel, callDeleteApi}) => {
         </div>
         <div className="modal-body">
           <Form>
-            <LabelInput>Enter Staff ID to delete</LabelInput>
+            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
           </Form>
         </div>
         <div className="modal-footer">
