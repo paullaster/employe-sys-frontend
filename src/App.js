@@ -20,7 +20,7 @@ const [updateStaffModel, setUpdateStaffModel] = useState(false);
 const [fname, setFname] = useState([]);
 const [lname, setLname] = useState([]);
 const [supervisor, setSupervisor] = useState([]);
-const [Salary, setSalary] = useState([]);
+const [salary, setSalary] = useState([]);
 const [deptId, setDeptId] = useState([]);
 const [title, setTitle] = useState([]);
 const [isError, setIsError] = useState ( false);
@@ -131,7 +131,28 @@ const handleDeptDeleteApi = () => {
 };
 
 
+const handleStaffUpdateApi = () => {
+  fetch ( 'http://localhost:4000/staff/update', {
+    method: 'PUT',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      fname:fname,
+      lname:lname,
+      supervisor:supervisor,
+      salary:salary,
+      deptId:deptId,
+      title:title,
 
+    })
+  })
+  .then ( (resp) => resp.json ())
+  .then ( (data) => console.log (data) )
+  .catch ( (err) => {
+    setIsError ( true);
+  });
+};
 
 
 const handleStaffUpdateCloseModel = () => {
@@ -171,7 +192,8 @@ const handleDeptIdUpdateChange = (event) => {
     supervisor={handleSupervisorUpdateChange}
     deptId={ handleDeptIdUpdateChange}
     title={handleTitleUpdateChange}
-    closeModel={handleStaffUpdateCloseModel} />}
+    closeModel={handleStaffUpdateCloseModel}
+    StaffupdateApi = {handleStaffUpdateApi} />}
     </>
   );
 }
