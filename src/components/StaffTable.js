@@ -1,5 +1,6 @@
 import StaffTBodyItem from "./StaffTBodyItem";
 import {v4 as uuidv4} from 'uuid';
+import '../assets/table.css'
 const StaffTable = ({ inputData, caption = "Table", children }) => {
   return (
     <table>

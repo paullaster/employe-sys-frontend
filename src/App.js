@@ -2,7 +2,6 @@ import './App.css';
 import Departments from './components/Departments';
 import {useState, useEffect} from 'react';
 import Staff from './components/Staff';
-//import {Routes, Route, Link} from 'react-router-dom';
 
 
 

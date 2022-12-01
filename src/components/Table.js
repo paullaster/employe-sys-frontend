@@ -1,5 +1,6 @@
 import TBodyItem from "./TBodyItem";
 import {v4 as uuidv4} from 'uuid';
+import '../assets/table.css'
 const Table = ({ inputData, caption = "Table", children }) => {
   return (
     <table>
