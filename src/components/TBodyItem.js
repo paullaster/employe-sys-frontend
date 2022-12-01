@@ -1,14 +1,14 @@
-const TBodyItem = ({dept}) => {
+const TBodyItem = ({department}) => {
     return (
         <tr>
             <td>
-                {dept.deptId}
+                {department.deptId}
             </td>
             <td>
-                {dept.deptName}
+                {department.deptName}
             </td>
             <td>
-                {dept.deptManager}
+                {department.deptManager}
             </td>
         </tr>
     );

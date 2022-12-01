@@ -2,6 +2,9 @@ import TBodyItem from "./TBodyItem";
 const Table = ({departments}) => {
     return (
         <table>
+            <caption>
+                Departments details
+            </caption>
             <thead>
                 <tr>
                     <th>Dept ID</th>
@@ -12,7 +15,9 @@ const Table = ({departments}) => {
             <tbody>
                 {
                     departments.map ( (department) => {
-                        <TBodyItem key={department.deptId} department={department}/>
+                        return (
+                            <TBodyItem key={department.deptId} department={department}/>
+                        )
                     })
                 }
             </tbody>

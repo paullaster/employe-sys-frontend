@@ -8,7 +8,7 @@ import {useState, useEffect} from 'react';
 const App = () => {
 
 
-const [department, setDepartment] = useState ([]);
+const [departments, setDepartments] = useState ([]);
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -22,7 +22,7 @@ const fetchDepartments = () => {
     return resp.json();
   })
   .then ( (data) => {
-    setDepartment (data.data)
+    setDepartments (data.data)
   })
   .catch ( (error) => {
     setIsError (true);
@@ -35,7 +35,7 @@ useEffect ( () => {
 
   return (
     <>
-     <Departments department = {department}/>
+     <Departments departments = {departments}/>
     </>
   );
 }
