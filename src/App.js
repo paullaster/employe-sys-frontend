@@ -9,13 +9,28 @@ const App = () => {
 
 
 const [department, setDepartment] = useState ([]);
+const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
-  fetch
+  fetch ( 'http://localhost:4000/dept/search/all', {
+    method: 'GET',
+    headers: {
+      "Content-Type": "application/json"
+    }
+  })
+  .then ( (resp) => {
+    return resp.json();
+  })
+  .then ( (data) => {
+    setDepartment (data.data)
+  })
+  .catch ( (error) => {
+    setIsError (true);
+  });
 };
 
 useEffect ( () => {
-
+  fetchDepartments ();
 }, [])
 
   return (
