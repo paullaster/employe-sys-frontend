@@ -67,6 +67,9 @@ const handleChange = (event) => {
 
 const handleDelete = () => {
   setDeleteModel (true);
+};
+
+const handleDeptDelete = () => {
   setDeptDeleteModel (true);
 };
 
@@ -74,6 +77,11 @@ const handleCloseModal = () => {
   setDeleteModel (false);
   setDeptDeleteModel (false);
 };
+
+const handleDeptCloseModal = () => {
+  setDeptDeleteModel (false);
+};
+
 const handleDeleteApi = () => {
    
   fetch ('http://localhost:4000/staff/delete', {
@@ -118,9 +126,9 @@ const handleDeptDeleteApi = () => {
   return (
     <>
     <Staff staffs={staffs} onClick={handleDelete}/>
-    <Departments departments = {departments} onClick={handleDelete}/>
+    <Departments departments = {departments} onClick={handleDeptDelete}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
-    {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
+    {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
     </>
   );
 }
