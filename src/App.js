@@ -4,6 +4,7 @@ import {useState, useEffect} from 'react';
 import Staff from './components/Staff';
 import DeleteModal from './components/DeleteModal';
 import DeleteDeptModal from './components/DeleteDeptModal';
+import StaffUpdateModal from './components/StaffUpdateModal';
 
 
 
@@ -15,6 +16,13 @@ const [staffs, setStaffs] = useState ([]);
 const [openDeleteModel, setDeleteModel] =  useState(false);
 const [openDeptDeleteModel, setDeptDeleteModel] =  useState(false);
 const [inputValue, setInputValue] = useState([]);
+const [updateStaffModel, setUpdateStaffModel] = useState(false);
+const [fname, setFname] = useState([]);
+const [lname, setLname] = useState([]);
+const [supervisor, setSupervisor] = useState([]);
+const [Salary, setSalary] = useState([]);
+const [deptId, setDeptId] = useState([]);
+const [title, setTitle] = useState([]);
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -123,12 +131,47 @@ const handleDeptDeleteApi = () => {
 };
 
 
+
+
+
+const handleStaffUpdateCloseModel = () => {
+  setUpdateStaffModel (false);
+};
+
+const handleTitleUpdateChange = (event) => {
+  setTitle (event.target.value);
+};
+const handleLnameUpdateChange = (event) => {
+  setLname (event.target.value);
+};
+const handleFnameUpdateChange = (event) => {
+  setFname (event.target.value);
+};
+
+const handleSalaryUpdateChange = (event) => {
+  setSalary (event.target.value);
+};
+const handleSupervisorUpdateChange = (event) => {
+  setSupervisor (event.target.value);
+};
+
+const handleDeptIdUpdateChange = (event) => {
+  setDeptId (event.target.value);
+};
   return (
     <>
     <Staff staffs={staffs} onClick={handleDelete}/>
     <Departments departments = {departments} onClick={handleDeptDelete}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
+    {updateStaffModel && <StaffUpdateModal
+    fname={handleFnameUpdateChange} 
+    lname={handleLnameUpdateChange}
+    Salary={handleSalaryUpdateChange}
+    supervisor={handleSupervisorUpdateChange}
+    deptId={ handleDeptIdUpdateChange}
+    title={handleTitleUpdateChange}
+    closeModel={handleStaffUpdateCloseModel} />}
     </>
   );
 }
