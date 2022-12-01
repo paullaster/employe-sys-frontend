@@ -2,6 +2,7 @@ import './App.css';
 import Departments from './components/Departments';
 import {useState, useEffect} from 'react';
 import Staff from './components/Staff';
+import DeleteModal from './components/DeleteModal';
 
 
 
@@ -10,7 +11,7 @@ const App = () => {
 
 const [departments, setDepartments] = useState ([]);
 const [staffs, setStaffs] = useState ([]);
-
+const [openDeleteModel, setDeleteModel] =  useState(false)
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -56,13 +57,16 @@ useEffect ( () => {
   fetchStaffs ();
 }, []);
 
-
+const handleDelete = () => {
+  setDeleteModel (true);
+};
 
 
   return (
     <>
-    <Staff staffs={staffs}/>
+    <Staff staffs={staffs} onClick={handleDelete}/>
     <Departments departments = {departments}/>
+    {openDeleteModel && <DeleteModal  />}
     </>
   );
 }
