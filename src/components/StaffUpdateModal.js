@@ -12,11 +12,12 @@ const DeleteModal = ({handleChange, closeModel, callDeleteApi}) => {
         </div>
         <div className="modal-body">
           <Form>
-            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
-            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
-            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
-            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
-            <LabelInput handleChange={handleChange}>Enter Staff ID to delete</LabelInput>
+            <LabelInput handleChange={handleChange}>First Name</LabelInput>
+            <LabelInput handleChange={handleChange}>Last Name</LabelInput>
+            <LabelInput handleChange={handleChange}>Supervisor</LabelInput>
+            <LabelInput handleChange={handleChange}>Salary</LabelInput>
+            <LabelInput handleChange={handleChange}>Department ID</LabelInput>
+            <LabelInput handleChange={handleChange}>Title</LabelInput>
           </Form>
         </div>
         <div className="modal-footer">
