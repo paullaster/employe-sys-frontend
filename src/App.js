@@ -81,6 +81,10 @@ const handleDeptDelete = () => {
   setDeptDeleteModel (true);
 };
 
+const handleStaffUpdate = () => {
+  setUpdateStaffModel (true);
+};
+
 const handleCloseModal = () => {
   setDeleteModel (false);
   setDeptDeleteModel (false);
