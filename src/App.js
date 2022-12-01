@@ -12,7 +12,7 @@ const [department, setDepartment] = useState ([]);
 
   return (
     <>
-     <Departments />
+     <Departments department = {department}/>
     </>
   );
 }

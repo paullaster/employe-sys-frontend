@@ -1,4 +1,4 @@
-const Departments = () => {
+const Departments = ({depaartment}) => {
     return (
         
     )
