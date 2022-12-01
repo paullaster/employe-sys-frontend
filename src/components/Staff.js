@@ -1,10 +1,9 @@
-import Table from "./Table";
+import StaffTable from "./StaffTable";
 import THeadItem from "./THeadItem";
 
 const Staff = ({staffs}) => {
   return (
-    <Table inputData={staffs} caption="Employee Information">
-        <THeadItem>Staff ID</THeadItem>
+    <StaffTable inputData={staffs} caption="Employee Information">
         <THeadItem>Name</THeadItem>
         <THeadItem>Title</THeadItem>
         <THeadItem> Salary </THeadItem>
@@ -12,7 +11,7 @@ const Staff = ({staffs}) => {
         <THeadItem>Supervisor</THeadItem>
         <THeadItem>Manager</THeadItem>
         <THeadItem>Start Date</THeadItem>
-    </Table>
+    </StaffTable>
   );
 };
 export default Staff;
