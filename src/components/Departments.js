@@ -1,9 +1,13 @@
 import Table from "./Table";
+import THeadItem from "./THeadItem";
 
 const Departments = ({departments}) => {
-    console.log ( departments)
     return (
-        <Table departments={departments}/>
+        <Table departments={departments} caption="Department Records">
+            <THeadItem>Departments ID</THeadItem>
+          <THeadItem>Departments Name</THeadItem>
+          <THeadItem>Departments Manager</THeadItem>
+        </Table>
     )
 };
 export default Departments;

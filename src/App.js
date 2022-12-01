@@ -33,7 +33,7 @@ const fetchDepartments = () => {
 
 
 const fetchStaffs = () => {
-  fetch ( 'localhost:4000/staff/search/all', {
+  fetch ( 'http://localhost:4000/staff/search/all', {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json'
