@@ -1,0 +1,17 @@
+.modal {
+    position: relative;
+    background-color: black;
+}
+.modal-container{
+    position: absolute;
+    background-color: bisque !important;
+    top: -55em;
+    left: 40% !important;
+    height: 25vh;
+    padding: 10px;
+}
+.modal-footer button {
+    width: 50% !important;
+    margin-top: 10px;
+    background-color: red;
+}

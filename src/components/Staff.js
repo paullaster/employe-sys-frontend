@@ -7,6 +7,7 @@ const Staff = ({ onClick, staffs }) => {
   return (
     <>
       <StaffTable inputData={staffs} caption="Employee Information">
+      <THeadItem>Staff ID</THeadItem>
         <THeadItem>Name</THeadItem>
         <THeadItem>Title</THeadItem>
         <THeadItem> Salary </THeadItem>

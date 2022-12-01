@@ -2,6 +2,9 @@ const StaffTBodyItem = ({data}) => {
     return (
         <tr>
             <td>
+                {data.staffId}
+            </td>
+            <td>
                 {data.fname + ' ' + data.lname}
             </td>
             <td>
