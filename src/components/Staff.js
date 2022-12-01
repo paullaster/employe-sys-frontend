@@ -1,15 +1,12 @@
 import StaffTable from "./StaffTable";
 import THeadItem from "./THeadItem";
 import Button from "./Button";
-
 const Staff = ({staffs}) => {
-    const handleAddNewStaff = () => {
-        alert("Please");
-    };
+    
 
   return (
     <>
-    <Button onClick={handleAddNewStaff}>
+    <Button>
         Create new staff
     </Button>
     <StaffTable inputData={staffs} caption="Employee Information">
