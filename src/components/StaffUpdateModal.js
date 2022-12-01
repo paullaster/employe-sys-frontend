@@ -3,7 +3,8 @@ import Form from "./Form";
 import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 import '../assets/model.css'
-const DeleteModal = ({, closeModel, }) => {
+const DeleteModal = (
+    {fname, lname, supervisor, salary, deptId, title, closeModel, StaffupdateApi }) => {
   return (
     <div className="modal">
       <div className="modal-container">
@@ -12,16 +13,16 @@ const DeleteModal = ({, closeModel, }) => {
         </div>
         <div className="modal-body">
           <Form>
-            <LabelInput handleChange={handleChange}>First Name</LabelInput>
-            <LabelInput handleChange={handleChange}>Last Name</LabelInput>
-            <LabelInput handleChange={handleChange}>Supervisor</LabelInput>
-            <LabelInput handleChange={handleChange}>Salary</LabelInput>
-            <LabelInput handleChange={handleChange}>Department ID</LabelInput>
-            <LabelInput handleChange={handleChange}>Title</LabelInput>
+            <LabelInput handleChange={fname}>First Name</LabelInput>
+            <LabelInput handleChange={lname}>Last Name</LabelInput>
+            <LabelInput handleChange={supervisor}>Supervisor</LabelInput>
+            <LabelInput handleChange={salary}>Salary</LabelInput>
+            <LabelInput handleChange={deptId}>Department ID</LabelInput>
+            <LabelInput handleChange={title}>Title</LabelInput>
           </Form>
         </div>
         <div className="modal-footer">
-            <Button onClick={()=> {closeModel (); callDeleteApi ();}}>Update</Button>
+            <Button onClick={()=> {closeModel (); StaffupdateApi ();}}>Update</Button>
         </div>
       </div>
     </div>
