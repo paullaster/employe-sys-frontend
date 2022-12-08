@@ -3,11 +3,11 @@ import Form from "./Form";
 import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 import '../assets/model.css'
-const DeleteModal = (
+const StaffUpdateModal = (
     {fname, lname, supervisor, salary, deptId, title, closeModel, StaffupdateApi }) => {
   return (
     <div className="modal">
-      <div className="modal-container">
+      <div className="modal-container-staff_update">
         <div className="modal-header">
           <div className="closeModel" onClick={closeModel}>&times;</div>
         </div>
@@ -29,4 +29,4 @@ const DeleteModal = (
   );
 };
 
-export default DeleteModal;
+export default StaffUpdateModal;

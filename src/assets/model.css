@@ -4,7 +4,7 @@
 }
 .modal-container{
     position: absolute;
-    background-color: bisque !important;
+    background-color: rgb(1, 9, 16) !important;
     top: -55em;
     left: 40% !important;
     height: 25vh;
@@ -12,7 +12,7 @@
 }
 .modal-container-dept{
     position: absolute;
-    background-color: bisque !important;
+    background-color: rgb(1, 9, 16) !important;
     top: -25em;
     left: 40% !important;
     height: 25vh;
@@ -23,4 +23,7 @@
     margin-top: 10px;
     background-color: red;
     cursor: pointer;
+}
+.modal-container-staff_update {
+    background-color: rgb(1, 9, 16) !important;
 }
