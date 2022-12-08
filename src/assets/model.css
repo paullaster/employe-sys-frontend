@@ -5,10 +5,12 @@
 .modal-container{
     position: absolute;
     background-color: rgb(1, 9, 16) !important;
-    top: -55em;
+    top: -60em;
     left: 40% !important;
-    height: 25vh;
+    width: 20em !important;
+    height: 35vh;
     padding: 10px;
+    border-radius: .8em !important;
 }
 .modal-container-dept{
     position: absolute;

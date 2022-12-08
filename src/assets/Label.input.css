@@ -12,9 +12,15 @@ label{
     justify-content: center;
     align-items: center !important;
     color: aliceblue;
+    
 }
-input{
+label > span {
+    padding-bottom: 4% !important;
+    margin-left: -20px;
+}
+label > input{
     display: block;
+    width: 100% !important;
     height: 5vh;
     outline: none;
 }
