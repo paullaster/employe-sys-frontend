@@ -4,7 +4,7 @@
 }
 .modal-container{
     position: absolute;
-    background-color: rgb(1, 9, 16) !important;
+    background-color: whitesmoke !important;
     top: -60em;
     left: 40% !important;
     width: 20em !important;
@@ -16,16 +16,23 @@
     position: absolute;
     background-color: rgb(1, 9, 16) !important;
     top: -25em;
-    left: 40% !important;
-    height: 25vh;
+    left: 30% !important;
+    width: 20em !important;
+    height: 35vh;
     padding: 10px;
+    border-radius: .8em !important;
+}
+.modal-container-dept > .modal-body > form > label > span {
+    padding-bottom: 4% !important;
+    margin-left: -90px;
 }
 .modal-footer button {
     width: 50% !important;
+    display: block;
     margin-top: 10px;
     background-color: red;
     cursor: pointer;
-    
+    margin-left: 0px !important;
 }
 .modal-container-staff_update {
     background-color: rgb(1, 9, 16) !important;

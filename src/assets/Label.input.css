@@ -11,12 +11,14 @@ label{
     flex-direction: column !important;
     justify-content: center;
     align-items: center !important;
-    color: aliceblue;
+    color: whitesmoke !important;
+    font-weight: 500;
+    font-size: 20px;
     margin-top: 5% !important;
 }
 label > span {
     padding-bottom: 4% !important;
-    margin-left: -140px;
+    margin-left: -100px;
 }
 label > input{
     display: block;
