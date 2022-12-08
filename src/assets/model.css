@@ -4,7 +4,7 @@
 }
 .modal-container{
     position: absolute;
-    background-color: whitesmoke !important;
+    background-color: rgb(1, 9, 16) !important;
     top: -60em;
     left: 40% !important;
     width: 20em !important;
@@ -24,7 +24,7 @@
 }
 .modal-container-dept > .modal-body > form > label > span {
     padding-bottom: 4% !important;
-    margin-left: -90px;
+    margin-left: -30px;
 }
 .modal-footer button {
     width: 50% !important;
