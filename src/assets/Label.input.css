@@ -12,15 +12,18 @@ label{
     justify-content: center;
     align-items: center !important;
     color: aliceblue;
-    
+    margin-top: 5% !important;
 }
 label > span {
     padding-bottom: 4% !important;
-    margin-left: -20px;
+    margin-left: -140px;
 }
 label > input{
     display: block;
-    width: 100% !important;
+    width: 90% !important;
+    margin-left:0;
     height: 5vh;
+    border-radius: .4em !important;
+    padding:  0 12px;
     outline: none;
 }
