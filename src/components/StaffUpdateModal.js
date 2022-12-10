@@ -14,11 +14,11 @@ const StaffUpdateModal = (
         <div className="modal-body">
           <Form>
             <LabelInput handleChange={title}>Staff ID</LabelInput>
+            <LabelInput handleChange={deptId}>Department ID</LabelInput>
             <LabelInput handleChange={fname}>First Name</LabelInput>
             <LabelInput handleChange={lname}>Last Name</LabelInput>
             <LabelInput handleChange={supervisor}>Supervisor</LabelInput>
             <LabelInput handleChange={salary}>Salary</LabelInput>
-            <LabelInput handleChange={deptId}>Department ID</LabelInput>
             <LabelInput handleChange={title}>Title</LabelInput>
           </Form>
         </div>
