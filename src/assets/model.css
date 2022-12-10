@@ -22,6 +22,16 @@
     padding: 10px;
     border-radius: .8em !important;
 }
+.modal-container-dept_update {
+    position: absolute;
+    background-color: rgb(1, 9, 16) !important;
+    top: -25em;
+    left: 30% !important;
+    width: 20em !important;
+    height: 35vh;
+    padding: 10px;
+    border-radius: .8em !important;
+}
 .modal-container-dept > .modal-body > form > label > span {
     padding-bottom: 4% !important;
     margin-left: -30px;

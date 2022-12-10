@@ -3,10 +3,10 @@ import Form from "./Form";
 import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 import '../assets/model.css'
-const DeptUpdateModal = ({deptId, deptName, deptManager, closeModel  }) => {
+const DeptUpdateModal = ({deptId, deptName, deptManager, closeModel, deptupdateApi  }) => {
             return (
                 <div className="modal">
-                  <div className="modal-container-staff_update">
+                  <div className="modal-container-dept_update">
                     <div className="modal-header">
                       <div className="closeModel" onClick={closeModel}>&times;</div>
                     </div>
@@ -19,7 +19,7 @@ const DeptUpdateModal = ({deptId, deptName, deptManager, closeModel  }) => {
                       </Form>
                     </div>
                     <div className="modal-footer">
-                        <Button onClick={()=> {closeModel (); StaffupdateApi ();}}>Update</Button>
+                        <Button onClick={()=> {closeModel (); deptupdateApi ();}}>Update</Button>
                     </div>
                   </div>
                 </div>

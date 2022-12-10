@@ -217,10 +217,10 @@ const handleDeptIdUpdateChange = (event) => {
 };
 
 const handleDeptNameChange = (event) => {
-
+  setDeptName (event.target.value);
 };
 const handleDeptManagerChange = (event) => {
-
+  setDeptManager (event.target.value);
 };
   return (
     <>

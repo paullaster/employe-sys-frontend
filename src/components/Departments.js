@@ -14,7 +14,7 @@ const Departments = ({ update, onClick, departments }) => {
       </Table>
 
       <Button type="create">Add department</Button>
-      <Button type="update" onClick={}>Update department</Button>
+      <Button type="update" onClick={update}>Update department</Button>
       <Button type="delete" onClick={onClick}>Delete department</Button>
     </>
   );
