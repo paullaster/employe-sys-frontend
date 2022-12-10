@@ -17,10 +17,11 @@ const [openDeleteModel, setDeleteModel] =  useState(false);
 const [openDeptDeleteModel, setDeptDeleteModel] =  useState(false);
 const [inputValue, setInputValue] = useState([]);
 const [updateStaffModel, setUpdateStaffModel] = useState(false);
+const [staffId, setStaffId] = useState([]);
 const [fname, setFname] = useState([]);
 const [lname, setLname] = useState([]);
 const [supervisor, setSupervisor] = useState([]);
-const [salary, setSalary] = useState([]);
+const [salary, setSalary] = useState(0);
 const [deptId, setDeptId] = useState([]);
 const [title, setTitle] = useState([]);
 const [isError, setIsError] = useState ( false);
@@ -107,7 +108,7 @@ const handleDeleteApi = () => {
     return resp.json();
   })
   .then ( (data) => {
-    console.log (data);
+    //console.log (data);
   } )
   .catch ( (error) => {
     setIsError (true)
@@ -127,14 +128,24 @@ const handleDeptDeleteApi = () => {
     return resp.json();
   })
   .then ( (data) => {
-    console.log (data);
+    //console.log (data);
   } )
   .catch ( (error) => {
     setIsError (true)
   });
 };
 
-
+// console.log (
+//   {
+//     staffId:staffId,
+//       fname:fname,
+//       lname:lname,
+//       supervisor:supervisor,
+//       salary:parseFloat(salary),
+//       deptId:deptId,
+//       title:title,
+//   }
+// )
 const handleStaffUpdateApi = () => {
   fetch ( 'http://localhost:4000/staff/update', {
     method: 'PUT',
@@ -142,17 +153,21 @@ const handleStaffUpdateApi = () => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
+      staffId:staffId,
       fname:fname,
       lname:lname,
       supervisor:supervisor,
-      salary:salary,
+      salary:parseFloat(salary),
       deptId:deptId,
       title:title,
 
     })
   })
   .then ( (resp) => resp.json ())
-  .then ( (data) => console.log (data) )
+  .then ( (data) => {
+    //console.log (data) 
+  }
+  )
   .catch ( (err) => {
     setIsError ( true);
   });
@@ -172,9 +187,12 @@ const handleLnameUpdateChange = (event) => {
 const handleFnameUpdateChange = (event) => {
   setFname (event.target.value);
 };
-
+const handleStaffIdUpdateChange = (event) => {
+  setStaffId (event.target.value);
+};
 const handleSalaryUpdateChange = (event) => {
-  setSalary (event.target.value);
+  console.log(event.target.value)
+  //setSalary (event.target.value);
 };
 const handleSupervisorUpdateChange = (event) => {
   setSupervisor (event.target.value);
@@ -190,6 +208,7 @@ const handleDeptIdUpdateChange = (event) => {
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
     {updateStaffModel && <StaffUpdateModal
+    staffid={handleStaffIdUpdateChange}
     fname={handleFnameUpdateChange} 
     lname={handleLnameUpdateChange}
     Salary={handleSalaryUpdateChange}

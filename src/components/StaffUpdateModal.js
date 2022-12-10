@@ -4,7 +4,7 @@ import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 import '../assets/model.css'
 const StaffUpdateModal = (
-    {fname, lname, supervisor, salary, deptId, title, closeModel, StaffupdateApi }) => {
+    {staffid, fname, lname, supervisor, salary, deptId, title, closeModel, StaffupdateApi }) => {
   return (
     <div className="modal">
       <div className="modal-container-staff_update">
@@ -13,12 +13,12 @@ const StaffUpdateModal = (
         </div>
         <div className="modal-body">
           <Form>
-            <LabelInput handleChange={title}>Staff ID</LabelInput>
+            <LabelInput handleChange={staffid}>Staff ID</LabelInput>
             <LabelInput handleChange={deptId}>Department ID</LabelInput>
             <LabelInput handleChange={fname}>First Name</LabelInput>
             <LabelInput handleChange={lname}>Last Name</LabelInput>
             <LabelInput handleChange={supervisor}>Supervisor</LabelInput>
-            <LabelInput handleChange={salary}>Salary</LabelInput>
+            <LabelInput type='number' handleChange={salary}>Salary</LabelInput>
             <LabelInput handleChange={title}>Title</LabelInput>
           </Form>
         </div>
