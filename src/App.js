@@ -26,6 +26,8 @@ const [supervisor, setSupervisor] = useState([]);
 const [salary, setSalary] = useState(0);
 const [deptId, setDeptId] = useState([]);
 const [title, setTitle] = useState([]);
+const [deptName, setDeptName] = useState([]);
+const [deptManager, setDeptManager] = useState([]);
 const [isError, setIsError] = useState ( false);
 
 const fetchDepartments = () => {
@@ -165,13 +167,15 @@ const handleStaffUpdateApi = () => {
   });
 };
 const handleDeptUpdateApi = () => {
-  fetch ( 'http://localhost:4000/staff/update', {
+  fetch ( 'http://localhost:4000/dept/update', {
     method: 'PUT',
     headers: {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
       deptId:deptId,
+      deptName:deptName,
+      deptManager:deptManager
 
     })
   })
