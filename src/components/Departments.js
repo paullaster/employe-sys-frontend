@@ -4,7 +4,7 @@ import Button from "./Button";
 import '../assets/Button.css'
 
 
-const Departments = ({ onClick, departments }) => {
+const Departments = ({ update, onClick, departments }) => {
   return (
     <>
       <Table inputData={departments} caption="Department Records">
@@ -14,7 +14,7 @@ const Departments = ({ onClick, departments }) => {
       </Table>
 
       <Button type="create">Add department</Button>
-      <Button type="update">Update department</Button>
+      <Button type="update" onClick={}>Update department</Button>
       <Button type="delete" onClick={onClick}>Delete department</Button>
     </>
   );
