@@ -134,18 +134,6 @@ const handleDeptDeleteApi = () => {
     setIsError (true)
   });
 };
-
-// console.log (
-//   {
-//     staffId:staffId,
-//       fname:fname,
-//       lname:lname,
-//       supervisor:supervisor,
-//       salary:parseFloat(salary),
-//       deptId:deptId,
-//       title:title,
-//   }
-// )
 const handleStaffUpdateApi = () => {
   fetch ( 'http://localhost:4000/staff/update', {
     method: 'PUT',
@@ -165,7 +153,7 @@ const handleStaffUpdateApi = () => {
   })
   .then ( (resp) => resp.json ())
   .then ( (data) => {
-    //console.log (data) 
+    console.log (data) 
   }
   )
   .catch ( (err) => {
@@ -191,8 +179,7 @@ const handleStaffIdUpdateChange = (event) => {
   setStaffId (event.target.value);
 };
 const handleSalaryUpdateChange = (event) => {
-  console.log(event.target.value)
-  //setSalary (event.target.value);
+  setSalary (event.target.value);
 };
 const handleSupervisorUpdateChange = (event) => {
   setSupervisor (event.target.value);
@@ -211,7 +198,7 @@ const handleDeptIdUpdateChange = (event) => {
     staffid={handleStaffIdUpdateChange}
     fname={handleFnameUpdateChange} 
     lname={handleLnameUpdateChange}
-    Salary={handleSalaryUpdateChange}
+    salary={handleSalaryUpdateChange}
     supervisor={handleSupervisorUpdateChange}
     deptId={ handleDeptIdUpdateChange}
     title={handleTitleUpdateChange}
