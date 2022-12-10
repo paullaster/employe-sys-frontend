@@ -164,7 +164,26 @@ const handleStaffUpdateApi = () => {
     setIsError ( true);
   });
 };
+const handleDeptUpdateApi = () => {
+  fetch ( 'http://localhost:4000/staff/update', {
+    method: 'PUT',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      deptId:deptId,
 
+    })
+  })
+  .then ( (resp) => resp.json ())
+  .then ( (data) => {
+    console.log (data) 
+  }
+  )
+  .catch ( (err) => {
+    setIsError ( true);
+  });
+};
 
 const handleStaffUpdateCloseModel = () => {
   setUpdateStaffModel (false);
@@ -221,6 +240,7 @@ const handleDeptManagerChange = (event) => {
       deptId={handleDeptIdUpdateChange}
       deptName={handleDeptNameChange}
       deptManager={handleDeptManagerChange}
+      deptupdateApi={handleDeptUpdateApi}
       />
     }
     </>
