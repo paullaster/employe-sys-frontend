@@ -4,7 +4,8 @@ import LabelInput from "./LabelIpunt";
 import Button from "./Button";
 import '../assets/model.css'
 const StaffUpdateModal = (
-    {staffid, fname, lname, supervisor, salary, deptId, title, closeModel, StaffupdateApi }) => {
+    {staffid, fname, lname, supervisor, salary, 
+      deptId, title, closeModel, StaffupdateApi }) => {
   return (
     <div className="modal">
       <div className="modal-container-staff_update">
