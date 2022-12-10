@@ -44,7 +44,6 @@
 }
 .modal-container-staff_update > 
 .modal-body > form {
-    background-color: blue !important;
     display: grid !important;
     grid-template-columns: 50% 50% !important;
 }
@@ -54,9 +53,17 @@
 }
 .modal-container-staff_update > 
 .modal-body > form > label > span {
+    margin-left: -440px !important;
+    text-align: justify;
+    margin-bottom: -45px !important;
 }
 .modal-container-staff_update > 
 .modal-body > form > label > input {
-    width: 40% !important;
+    width: 50% !important;
+    display: inline;
+}
+.modal-container-staff_update > 
+.modal-footer > button {
+    width: 50% !important;
     display: inline;
 }
