@@ -5,6 +5,7 @@ import Staff from './components/Staff';
 import DeleteModal from './components/DeleteModal';
 import DeleteDeptModal from './components/DeleteDeptModal';
 import StaffUpdateModal from './components/StaffUpdateModal';
+import DeptUpdateModal from './components/DeptUpdateModal';
 
 
 
@@ -17,6 +18,7 @@ const [openDeleteModel, setDeleteModel] =  useState(false);
 const [openDeptDeleteModel, setDeptDeleteModel] =  useState(false);
 const [inputValue, setInputValue] = useState([]);
 const [updateStaffModel, setUpdateStaffModel] = useState(false);
+const [updateDeptModal, setUpdateDeptModal] = useState (false);
 const [staffId, setStaffId] = useState([]);
 const [fname, setFname] = useState([]);
 const [lname, setLname] = useState([]);
@@ -85,7 +87,9 @@ const handleDeptDelete = () => {
 const handleStaffUpdate = () => {
   setUpdateStaffModel (true);
 };
-
+const handleDeptUpdate = () => {
+  setUpdateDeptModal (true);
+};
 const handleCloseModal = () => {
   setDeleteModel (false);
   setDeptDeleteModel (false);
@@ -188,10 +192,17 @@ const handleSupervisorUpdateChange = (event) => {
 const handleDeptIdUpdateChange = (event) => {
   setDeptId (event.target.value);
 };
+
+const handleDeptNameChange = (event) => {
+
+};
+const handleDeptManagerChange = (event) => {
+
+};
   return (
     <>
     <Staff staffs={staffs} update={handleStaffUpdate} onClick={handleDelete}/>
-    <Departments departments = {departments} onClick={handleDeptDelete}/>
+    <Departments departments = {departments} update={handleDeptUpdate} onClick={handleDeptDelete}/>
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
     {updateStaffModel && <StaffUpdateModal
@@ -204,6 +215,14 @@ const handleDeptIdUpdateChange = (event) => {
     title={handleTitleUpdateChange}
     closeModel={handleStaffUpdateCloseModel}
     StaffupdateApi = {handleStaffUpdateApi} />}
+    {
+      updateDeptModal && 
+      <DeptUpdateModal
+      deptId={handleDeptIdUpdateChange}
+      deptName={handleDeptNameChange}
+      deptManager={handleDeptManagerChange}
+      />
+    }
     </>
   );
 }
