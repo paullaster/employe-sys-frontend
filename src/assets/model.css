@@ -6,7 +6,7 @@
     position: absolute;
     background-color: rgb(1, 9, 16) !important;
     top: -60em;
-    left: 40% !important;
+    left: 30% !important;
     width: 20em !important;
     height: 35vh;
     padding: 10px;
@@ -36,4 +36,27 @@
 }
 .modal-container-staff_update {
     background-color: rgb(1, 9, 16) !important;
+    position: absolute;
+    top: -70em;
+    left: 10% !important;
+    width: 80% !important;
+    padding: 20px !important;
+}
+.modal-container-staff_update > 
+.modal-body > form {
+    background-color: blue !important;
+    display: grid !important;
+    grid-template-columns: 50% 50% !important;
+}
+.modal-container-staff_update > 
+.modal-body > form > label {
+    display: block;
+}
+.modal-container-staff_update > 
+.modal-body > form > label > span {
+}
+.modal-container-staff_update > 
+.modal-body > form > label > input {
+    width: 40% !important;
+    display: inline;
 }
