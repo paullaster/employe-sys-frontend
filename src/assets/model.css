@@ -219,16 +219,16 @@
     display: block;
     margin-left: -480px;
 }
-.modal-container-dept_update > 
+.modal-container-dept_createnew > 
 .modal-footer > button {
     width: 330px !important;
     margin-left: -100px !important;
     margin-top: 35px;
     margin-bottom: -50px;
-    background-color: rgb(53, 0, 246);
+    background-color: rgb(9, 178, 20);
     color: whitesmoke;
 }
-.modal-container-dept_update > 
+.modal-container-dept_createnew > 
 .modal-header > .closeModel {
     margin-top: -5px;
     margin-right: 10px !important;
