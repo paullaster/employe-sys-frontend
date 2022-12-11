@@ -147,6 +147,7 @@ const handleDeleteApi = () => {
   })
   .then ( (data) => {
     //console.log (data);
+    setIsSuccess (data.message);
   } )
   .catch ( (error) => {
     setIsError (true)
@@ -167,6 +168,7 @@ const handleDeptDeleteApi = () => {
   })
   .then ( (data) => {
     //console.log (data);
+    setIsSuccess (data.message);
   } )
   .catch ( (error) => {
     setIsError (true)
@@ -191,7 +193,8 @@ const handleStaffUpdateApi = () => {
   })
   .then ( (resp) => resp.json ())
   .then ( (data) => {
-    console.log (data) 
+    //console.log (data) 
+    setIsSuccess (data.message);
   }
   )
   .catch ( (err) => {
@@ -213,7 +216,8 @@ const handleDeptUpdateApi = () => {
   })
   .then ( (resp) => resp.json ())
   .then ( (data) => {
-    console.log (data) 
+    //console.log (data) 
+    setIsSuccess (data.message);
   }
   )
   .catch ( (err) => {
