@@ -3,9 +3,11 @@ import '../assets/Message.css';
 const Message = ({ duration, persistOnHover = "true", message }) => {
   return (
     <FlassMessage duration={duration} persistOnHover={persistOnHover}>
-      <p>
-        {message}
-      </p>
+      <div>
+        <p>
+            {message}
+        </p>
+      </div>
     </FlassMessage>
   );
 };
