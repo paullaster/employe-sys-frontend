@@ -111,6 +111,9 @@ const handleStaffUpdateCloseModel = () => {
 const handleDeptUpdateCloseModel = () => {
   setUpdateDeptModal (false);
 };
+const handleNewStaffCloseModal = () => {
+  setNewStaffModal (false);
+};
 const handleDeleteApi = () => {
    
   fetch ('http://localhost:4000/staff/delete', {
@@ -270,7 +273,7 @@ const handleDeptManagerChange = (event) => {
      {
       NewStaffModal && 
       <CreateNewStaffModal
-      
+      closeModel={handleNewStaffCloseModal}
       />
      }
     </>
