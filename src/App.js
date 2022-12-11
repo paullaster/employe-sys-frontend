@@ -202,7 +202,33 @@ const handleDeptUpdateApi = () => {
   });
 };
 
+//Create new staff API
+const handleStaffUpdateApi = () => {
+  fetch ( 'http://localhost:4000/staff/update', {
+    method: 'PUT',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      staffId:staffId,
+      fname:fname,
+      lname:lname,
+      supervisor:supervisor,
+      salary:parseFloat(salary),
+      deptId:deptId,
+      title:title,
 
+    })
+  })
+  .then ( (resp) => resp.json ())
+  .then ( (data) => {
+    console.log (data) 
+  }
+  )
+  .catch ( (err) => {
+    setIsError ( true);
+  });
+};
 
 //Handdling user inputs
 const handleTitleUpdateChange = (event) => {
