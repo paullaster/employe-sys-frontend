@@ -22,6 +22,7 @@ const [inputValue, setInputValue] = useState([]);
 const [updateStaffModel, setUpdateStaffModel] = useState(false);
 const [updateDeptModal, setUpdateDeptModal] = useState (false);
 const [NewStaffModal, setNewStaffModal] = useState (false);
+const [newDeptModal, setNewDeptModal] = useState (false);
 const [staffId, setStaffId] = useState([]);
 const [fname, setFname] = useState([]);
 const [lname, setLname] = useState([]);
@@ -82,6 +83,7 @@ const handleChange = (event) => {
   setInputValue (event.target.value);
 };
 
+//Handling openning Modals:
 const handleDelete = () => {
   setDeleteModel (true);
 };
@@ -99,6 +101,10 @@ const handleDeptUpdate = () => {
 const handleNewStaffModal = () => {
   setNewStaffModal (true);
 };
+
+
+
+//Handling closing Modals
 const handleCloseModal = () => {
   setDeleteModel (false);
   setDeptDeleteModel (false);
@@ -116,6 +122,10 @@ const handleDeptUpdateCloseModel = () => {
 const handleNewStaffCloseModal = () => {
   setNewStaffModal (false);
 };
+
+const handleNewDeptCloseModal = () => {};
+
+//Back-end APIs
 const handleDeleteApi = () => {
    
   fetch ('http://localhost:4000/staff/delete', {
@@ -232,7 +242,28 @@ const handleNewStaffApi = () => {
   });
 };
 
-
+//Create new Department API
+const handleNewDeptApi = () => {
+  fetch ( 'http://localhost:4000/dept/insert', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      deptId:deptId,
+      deptName:deptName,
+      deptManager:deptManager,
+    })
+  })
+  .then ( (resp) => resp.json ())
+  .then ( (data) => {
+    console.log (data) 
+  }
+  )
+  .catch ( (err) => {
+    setIsError ( true);
+  });
+};
 
 //Handdling user inputs
 const handleStaffTitleChange = (event) => {
@@ -362,11 +393,13 @@ const handleStaffStartDateChange = (event) => {
      }
      {/* Create new dept */}
      {
+      newDeptModal &&
       <CreateNewDeptModal 
       deptId={handleDeptIdChange}
       deptName={handleDeptNameChane}
       deptManager={handleDeptManagerChange}
-      createNewDept={}
+      createNewDept={handleNewDeptApi}
+      closeModel={handleNewDeptCloseModal}
       />
      }
     </>
