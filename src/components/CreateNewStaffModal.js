@@ -20,7 +20,6 @@ const CreateNewStaffModal = (
             <LabelInput handleChange={lname}>Last Name</LabelInput>
             <LabelInput handleChange={supervisor}>Supervisor</LabelInput>
             <LabelInput type='number' handleChange={salary}>Salary</LabelInput>
-            <LabelInput type='number' handleChange={startDate}>Start Date</LabelInput>
             <LabelInput handleChange={title}>Title</LabelInput>
           </Form>
         </div>
