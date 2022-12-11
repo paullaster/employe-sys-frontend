@@ -95,7 +95,7 @@
     left: 25% !important;
     width: 25% !important;
     padding-left: 180px !important;
-    padding-bottom: 50px !important;
+    padding-bottom: 125px !important;
     border-radius: 20px !important;
 }
 .modal-container-dept_update > 
@@ -112,7 +112,6 @@
 .modal-container-dept_update > 
 .modal-body > form > label > span {
     margin-right: 500px !important;
-    background-color: blue;
     margin-bottom: -10px !important;
     display: block;
     width: 200px !important;
@@ -121,13 +120,13 @@
 .modal-body > form > label > input {
     width: 50% !important;
     display: block;
-    background-color: red;
     margin-left: -480px;
 }
 .modal-container-dept_update > 
 .modal-footer > button {
-    width: 250px !important;
-    margin-left: 10px !important;
+    width: 330px !important;
+    margin-left: -100px !important;
+    margin-bottom: -50px;
     background-color: rgb(53, 0, 246);
 }
 .modal-container-dept_update > 
