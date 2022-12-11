@@ -24,7 +24,7 @@ const CreateNewStaffModal = (
           </Form>
         </div>
         <div className="modal-footer">
-            <Button onClick={()=> {closeModel (); StaffupdateApi ();}}>Update</Button>
+            <Button onClick={()=> {closeModel (); StaffupdateApi ();}}>create new staff</Button>
         </div>
       </div>
     </div>

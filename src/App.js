@@ -94,6 +94,9 @@ const handleStaffUpdate = () => {
 const handleDeptUpdate = () => {
   setUpdateDeptModal (true);
 };
+const handleNewStaffModal = () => {
+  setNewStaffModal (true);
+};
 const handleCloseModal = () => {
   setDeleteModel (false);
   setDeptDeleteModel (false);
@@ -102,7 +105,12 @@ const handleCloseModal = () => {
 const handleDeptCloseModal = () => {
   setDeptDeleteModel (false);
 };
-
+const handleStaffUpdateCloseModel = () => {
+  setUpdateStaffModel (false);
+};
+const handleDeptUpdateCloseModel = () => {
+  setUpdateDeptModal (false);
+};
 const handleDeleteApi = () => {
    
   fetch ('http://localhost:4000/staff/delete', {
@@ -190,13 +198,6 @@ const handleDeptUpdateApi = () => {
     setIsError ( true);
   });
 };
-
-const handleStaffUpdateCloseModel = () => {
-  setUpdateStaffModel (false);
-};
-const handleDeptUpdateCloseModel = () => {
-  setUpdateDeptModal (false);
-};
 const handleTitleUpdateChange = (event) => {
   setTitle (event.target.value);
 };
@@ -228,7 +229,12 @@ const handleDeptManagerChange = (event) => {
 };
   return (
     <>
-    <Staff staffs={staffs} update={handleStaffUpdate} onClick={handleDelete}/>
+    <Staff 
+    staffs={staffs}
+    newstaff={handleNewStaffModal} 
+    update={handleStaffUpdate} 
+    onClick={handleDelete}
+    />
     <Departments departments = {departments} update={handleDeptUpdate} onClick={handleDeptDelete}/>
     {/**
      * Delete Modals
