@@ -417,7 +417,7 @@ const handleStaffStartDateChange = (event) => {
       />
      }
      <Message 
-     duration={5000}
+     duration={50000}
      message={isSuccess}
      />
     </>
