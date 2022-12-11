@@ -68,7 +68,7 @@ const fetchStaffs = () => {
   } )
   .then ( (data) => {
     setStaffs (data.data);
-    setIsSuccess (data.message);
+    //setIsSuccess (data.message);
   } )
   .catch ( (error) => {
     setIsError ( true);
