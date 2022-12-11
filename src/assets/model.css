@@ -185,7 +185,7 @@
 }
 
 /* Add new Department */
-.modal-container-dept_update {
+.modal-container-dept_createnew {
     background-color: rgb(1, 9, 16) !important;
     position: absolute;
     top: -35em;
@@ -195,18 +195,18 @@
     padding-bottom: 125px !important;
     border-radius: 20px !important;
 }
-.modal-container-dept_update > 
+.modal-container-dept_createnew > 
 .modal-body > form {
     display: grid !important;
     grid-template-rows: auto !important;
     justify-content: flex-start;
     align-items: flex-start;
 }
-.modal-container-dept_update > 
+.modal-container-dept_createnew > 
 .modal-body > form > label {
     display: block;
 }
-.modal-container-dept_update > 
+.modal-container-dept_createnew > 
 .modal-body > form > label > span {
     margin-right: 500px !important;
     margin-bottom: -10px !important;
