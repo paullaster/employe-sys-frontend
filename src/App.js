@@ -7,6 +7,7 @@ import DeleteDeptModal from './components/DeleteDeptModal';
 import StaffUpdateModal from './components/StaffUpdateModal';
 import DeptUpdateModal from './components/DeptUpdateModal';
 import CreateNewStaffModal from './components/CreateNewStaffModal';
+import CreateNewDeptModal from './components/CreateNewDeptModal';
 
 
 
@@ -231,6 +232,8 @@ const handleNewStaffApi = () => {
   });
 };
 
+
+
 //Handdling user inputs
 const handleStaffTitleChange = (event) => {
   setTitle (event.target.value);
@@ -359,7 +362,12 @@ const handleStaffStartDateChange = (event) => {
      }
      {/* Create new dept */}
      {
-      
+      <CreateNewDeptModal 
+      deptId={handleDeptIdChange}
+      deptName={handleDeptNameChane}
+      deptManager={handleDeptManagerChange}
+      createNewDept={}
+      />
      }
     </>
   );

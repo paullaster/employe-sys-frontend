@@ -126,8 +126,10 @@
 .modal-footer > button {
     width: 330px !important;
     margin-left: -100px !important;
+    margin-top: 35px;
     margin-bottom: -50px;
     background-color: rgb(53, 0, 246);
+    color: whitesmoke;
 }
 .modal-container-dept_update > 
 .modal-header > .closeModel {
