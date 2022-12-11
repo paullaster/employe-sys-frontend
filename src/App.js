@@ -34,7 +34,8 @@ const [StaffStartDate, setStaffStartDate] = useState([]);
 const [deptName, setDeptName] = useState([]);
 const [deptManager, setDeptManager] = useState([]);
 const [isError, setIsError] = useState ( false);
-const [isSuccess, setIsSuccess] = useState ([])
+const [isSuccess, setIsSuccess] = useState ([]);
+
 
 const fetchDepartments = () => {
   fetch ( 'http://localhost:4000/dept/search/all', {
@@ -153,7 +154,7 @@ const handleDeleteApi = () => {
     setIsError (true)
   });
 };
-
+console.log (isSuccess)
 const handleDeptDeleteApi = () => {
    
   fetch ('http://localhost:4000/dept/delete', {
