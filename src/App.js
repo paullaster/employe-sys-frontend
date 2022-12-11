@@ -6,6 +6,7 @@ import DeleteModal from './components/DeleteModal';
 import DeleteDeptModal from './components/DeleteDeptModal';
 import StaffUpdateModal from './components/StaffUpdateModal';
 import DeptUpdateModal from './components/DeptUpdateModal';
+import CreateNewStaffModal from './components/CreateNewStaffModal';
 
 
 
@@ -19,6 +20,7 @@ const [openDeptDeleteModel, setDeptDeleteModel] =  useState(false);
 const [inputValue, setInputValue] = useState([]);
 const [updateStaffModel, setUpdateStaffModel] = useState(false);
 const [updateDeptModal, setUpdateDeptModal] = useState (false);
+const [NewStaffModal, setNewStaffModal] = useState (false);
 const [staffId, setStaffId] = useState([]);
 const [fname, setFname] = useState([]);
 const [lname, setLname] = useState([]);
@@ -256,6 +258,15 @@ const handleDeptManagerChange = (event) => {
       closeModel={handleDeptUpdateCloseModel}
       />
     }
+    {/**
+     * create new Modals
+     */}
+     {
+      NewStaffModal && 
+      <CreateNewStaffModal
+      
+      />
+     }
     </>
   );
 }
