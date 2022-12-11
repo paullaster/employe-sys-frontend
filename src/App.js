@@ -340,7 +340,7 @@ const handleStaffStartDateChange = (event) => {
       {/* Creating new */}
 
     {/**
-     * create new Modals
+     * create new staff Modals
      */}
      {
       NewStaffModal && 
