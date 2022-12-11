@@ -204,7 +204,7 @@ const handleDeptUpdateApi = () => {
 
 //Create new staff API
 const handleNewStaffApi = () => {
-  fetch ( 'http://localhost:4000/staff/update', {
+  fetch ( 'http://localhost:4000/staff/insert', {
     method: 'PUT',
     headers: {
       "Content-Type": "application/json",
@@ -304,6 +304,7 @@ const handleDeptManagerChange = (event) => {
       NewStaffModal && 
       <CreateNewStaffModal
       closeModel={handleNewStaffCloseModal}
+      createNewStaff={handleNewStaffApi}
       />
      }
     </>

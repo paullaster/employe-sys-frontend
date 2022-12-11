@@ -5,7 +5,7 @@ import Button from "./Button";
 import '../assets/model.css'
 const CreateNewStaffModal = (
     {staffid, fname, lname, supervisor, salary, 
-      deptId, title, closeModel, StaffupdateApi }) => {
+      deptId, title, closeModel, createNewStaff }) => {
   return (
     <div className="modal">
       <div className="modal-container-staff_update">
@@ -24,7 +24,7 @@ const CreateNewStaffModal = (
           </Form>
         </div>
         <div className="modal-footer">
-            <Button onClick={()=> {closeModel (); StaffupdateApi ();}}>create new staff</Button>
+            <Button onClick={()=> {closeModel (); createNewStaff ();}}>create new staff</Button>
         </div>
       </div>
     </div>
