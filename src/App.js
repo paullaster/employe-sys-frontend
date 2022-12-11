@@ -228,8 +228,14 @@ const handleDeptManagerChange = (event) => {
     <>
     <Staff staffs={staffs} update={handleStaffUpdate} onClick={handleDelete}/>
     <Departments departments = {departments} update={handleDeptUpdate} onClick={handleDeptDelete}/>
+    {/**
+     * Delete Modals
+     */}
     {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
     {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
+    {/**
+     * update Modals
+     */}
     {updateStaffModel && <StaffUpdateModal
     staffid={handleStaffIdUpdateChange}
     fname={handleFnameUpdateChange} 
