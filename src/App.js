@@ -28,6 +28,7 @@ const [supervisor, setSupervisor] = useState([]);
 const [salary, setSalary] = useState(0);
 const [deptId, setDeptId] = useState([]);
 const [title, setTitle] = useState([]);
+const [StaffStartDate, setStaffStartDate] = useState([]);
 const [deptName, setDeptName] = useState([]);
 const [deptManager, setDeptManager] = useState([]);
 const [isError, setIsError] = useState ( false);
@@ -217,7 +218,7 @@ const handleNewStaffApi = () => {
       salary:parseFloat(salary),
       deptId:deptId,
       title:title,
-
+      startDate:StaffStartDate,
     })
   })
   .then ( (resp) => resp.json ())
@@ -259,6 +260,9 @@ const handleDeptNameChane = (event) => {
 };
 const handleDeptManagerChange = (event) => {
   setDeptManager (event.target.value);
+};
+const handleStaffStartDateChange = (event) => {
+  setStaffStartDate (event.target.value);
 };
   return (
     <>
@@ -348,6 +352,7 @@ const handleDeptManagerChange = (event) => {
         salary={handleStaffSalaryChange} 
         deptId={handleDeptIdChange}
        title={handleStaffTitleChange}
+       startDate={handleStaffStartDateChange}
       closeModel={handleNewStaffCloseModal}
       createNewStaff={handleNewStaffApi}
       />
