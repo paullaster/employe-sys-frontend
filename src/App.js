@@ -192,7 +192,9 @@ const handleDeptUpdateApi = () => {
 const handleStaffUpdateCloseModel = () => {
   setUpdateStaffModel (false);
 };
-
+const handleDeptUpdateCloseModel = () => {
+  setUpdateDeptModal (false);
+};
 const handleTitleUpdateChange = (event) => {
   setTitle (event.target.value);
 };
@@ -245,6 +247,7 @@ const handleDeptManagerChange = (event) => {
       deptName={handleDeptNameChange}
       deptManager={handleDeptManagerChange}
       deptupdateApi={handleDeptUpdateApi}
+      closeModel={handleDeptUpdateCloseModel}
       />
     }
     </>
