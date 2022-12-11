@@ -1,0 +1,14 @@
+.container-box {
+    background-color: blue;
+    position: relative;
+}
+.message-container{
+    position: absolute;
+    top: -73.5em !important;
+    width: 100%;
+}
+.message{
+    background-color: blue !important;
+    text-align: center;
+    padding: 20px 0 !important;
+}

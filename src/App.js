@@ -79,7 +79,7 @@ const fetchStaffs = () => {
 useEffect ( () => {
   fetchDepartments ();
   fetchStaffs ();
-}, [staffs, departments ]);
+}, [staffs, departments, isSuccess ]);
 
 
 const handleChange = (event) => {
