@@ -201,6 +201,10 @@ const handleDeptUpdateApi = () => {
     setIsError ( true);
   });
 };
+
+
+
+//Handdling user inputs
 const handleTitleUpdateChange = (event) => {
   setTitle (event.target.value);
 };
