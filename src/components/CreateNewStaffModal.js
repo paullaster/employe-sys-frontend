@@ -5,7 +5,7 @@ import Button from "./Button";
 import '../assets/model.css'
 const CreateNewStaffModal = (
     {staffid, fname, lname, supervisor, salary, 
-      deptId, title, closeModel, createNewStaff }) => {
+      deptId, title, startDate, closeModel, createNewStaff }) => {
   return (
     <div className="modal">
       <div className="modal-container-staff_update">
@@ -20,6 +20,7 @@ const CreateNewStaffModal = (
             <LabelInput handleChange={lname}>Last Name</LabelInput>
             <LabelInput handleChange={supervisor}>Supervisor</LabelInput>
             <LabelInput type='number' handleChange={salary}>Salary</LabelInput>
+            <LabelInput type='number' handleChange={startDate}>Start Date</LabelInput>
             <LabelInput handleChange={title}>Title</LabelInput>
           </Form>
         </div>

@@ -205,7 +205,7 @@ const handleDeptUpdateApi = () => {
 //Create new staff API
 const handleNewStaffApi = () => {
   fetch ( 'http://localhost:4000/staff/insert', {
-    method: 'PUT',
+    method: 'POST',
     headers: {
       "Content-Type": "application/json",
     },
