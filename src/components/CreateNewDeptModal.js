@@ -6,7 +6,7 @@ import '../assets/model.css'
 const CreateNewDeptModal = ({deptId, deptName, deptManager, closeModel, createNewDept  }) => {
             return (
                 <div className="modal">
-                  <div className="modal-container-dept_update">
+                  <div className="modal-container-dept_">
                     <div className="modal-header">
                       <div className="closeModel" onClick={closeModel}>&times;</div>
                     </div>

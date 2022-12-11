@@ -101,7 +101,9 @@ const handleDeptUpdate = () => {
 const handleNewStaffModal = () => {
   setNewStaffModal (true);
 };
-
+const handleNewDeptModal = () => {
+  setNewDeptModal (true);
+};
 
 
 //Handling closing Modals
@@ -123,7 +125,9 @@ const handleNewStaffCloseModal = () => {
   setNewStaffModal (false);
 };
 
-const handleNewDeptCloseModal = () => {};
+const handleNewDeptCloseModal = () => {
+  setNewDeptModal (false);
+};
 
 //Back-end APIs
 const handleDeleteApi = () => {
@@ -309,7 +313,7 @@ const handleStaffStartDateChange = (event) => {
     staffs={staffs}
     newstaff={handleNewStaffModal} 
     update={handleStaffUpdate} 
-    onClick={handleDelete}
+    remove={handleDelete}
     />
     {
       /**
@@ -317,9 +321,10 @@ const handleStaffStartDateChange = (event) => {
        */
     }
     <Departments 
-    departments = {departments} 
+    departments = {departments}
+    newdept={handleNewDeptModal} 
     update={handleDeptUpdate} 
-    onClick={handleDeptDelete}
+    remove={handleDeptDelete}
     />
     {/**
      * Delete Modals

@@ -2,7 +2,7 @@ import StaffTable from "./StaffTable";
 import THeadItem from "./THeadItem";
 import Button from "./Button";
 import "../assets/Button.css";
-const Staff = ({ newstaff, update, onClick, staffs }) => {
+const Staff = ({ newstaff, update, remove, staffs }) => {
 
   return (
     <>
@@ -18,7 +18,7 @@ const Staff = ({ newstaff, update, onClick, staffs }) => {
       </StaffTable>
       <Button type="create" onClick={newstaff}>Create new staff</Button>
       <Button type="update" onClick={update}>Update staff details</Button>
-      <Button type="delete" onClick={onClick}>Delete staff</Button>
+      <Button type="delete" onClick={remove}>Delete staff</Button>
     </>
   );
 };

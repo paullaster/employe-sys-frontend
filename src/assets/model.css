@@ -70,6 +70,7 @@
     margin-top: -40px !important;
     margin-left: 540px !important;
     background-color: rgb(53, 0, 246);
+    color: whitesmoke;
 }
 .modal-container-staff_update > 
 .modal-header > .closeModel {
@@ -178,6 +179,56 @@
     color: whitesmoke;
 }
 .modal-container-staff_createnew > 
+.modal-header > .closeModel {
+    margin-top: -5px;
+    margin-right: 10px !important;
+}
+
+/* Add new Department */
+.modal-container-dept_update {
+    background-color: rgb(1, 9, 16) !important;
+    position: absolute;
+    top: -35em;
+    left: 25% !important;
+    width: 25% !important;
+    padding-left: 180px !important;
+    padding-bottom: 125px !important;
+    border-radius: 20px !important;
+}
+.modal-container-dept_update > 
+.modal-body > form {
+    display: grid !important;
+    grid-template-rows: auto !important;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.modal-container-dept_update > 
+.modal-body > form > label {
+    display: block;
+}
+.modal-container-dept_update > 
+.modal-body > form > label > span {
+    margin-right: 500px !important;
+    margin-bottom: -10px !important;
+    display: block;
+    width: 200px !important;
+}
+.modal-container-dept_update > 
+.modal-body > form > label > input {
+    width: 50% !important;
+    display: block;
+    margin-left: -480px;
+}
+.modal-container-dept_update > 
+.modal-footer > button {
+    width: 330px !important;
+    margin-left: -100px !important;
+    margin-top: 35px;
+    margin-bottom: -50px;
+    background-color: rgb(53, 0, 246);
+    color: whitesmoke;
+}
+.modal-container-dept_update > 
 .modal-header > .closeModel {
     margin-top: -5px;
     margin-right: 10px !important;
