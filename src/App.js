@@ -203,7 +203,7 @@ const handleDeptUpdateApi = () => {
 };
 
 //Create new staff API
-const handleStaffUpdateApi = () => {
+const handleNewStaffApi = () => {
   fetch ( 'http://localhost:4000/staff/update', {
     method: 'PUT',
     headers: {
