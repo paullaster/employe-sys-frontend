@@ -8,6 +8,7 @@ import StaffUpdateModal from './components/StaffUpdateModal';
 import DeptUpdateModal from './components/DeptUpdateModal';
 import CreateNewStaffModal from './components/CreateNewStaffModal';
 import CreateNewDeptModal from './components/CreateNewDeptModal';
+import Message from './components/Message';
 
 
 const App = () => {
@@ -46,7 +47,8 @@ const fetchDepartments = () => {
     return resp.json();
   })
   .then ( (data) => {
-    setDepartments (data.data)
+    setDepartments (data.data);
+    setIsSuccess (data.message);
   })
   .catch ( (error) => {
     setIsError (true);
@@ -407,6 +409,10 @@ const handleStaffStartDateChange = (event) => {
       closeModel={handleNewDeptCloseModal}
       />
      }
+     <Message 
+     duration={5000}
+     message={isSuccess}
+     />
     </>
   );
 }
