@@ -357,6 +357,10 @@ const handleStaffStartDateChange = (event) => {
       createNewStaff={handleNewStaffApi}
       />
      }
+     {/* Create new dept */}
+     {
+      
+     }
     </>
   );
 }
