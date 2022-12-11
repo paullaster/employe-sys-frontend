@@ -303,6 +303,13 @@ const handleDeptManagerChange = (event) => {
      {
       NewStaffModal && 
       <CreateNewStaffModal
+      staffid={staffId}
+       fname={fname}
+        lname={lname}
+        supervisor={supervisor}
+        salary={salary} 
+        deptId={deptId}
+       title={title}
       closeModel={handleNewStaffCloseModal}
       createNewStaff={handleNewStaffApi}
       />
