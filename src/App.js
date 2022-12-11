@@ -308,8 +308,9 @@ const handleDeptManagerChange = (event) => {
     {/**
      * update Modals
      */}
-     
-    {updateStaffModel && <StaffUpdateModal
+    {/* Update staff */}
+    {updateStaffModel && 
+    <StaffUpdateModal
     staffid={handleStaffIdChange}
     fname={handleStaffFNameChange} 
     lname={handleStaffLNameChange}
@@ -318,7 +319,10 @@ const handleDeptManagerChange = (event) => {
     deptId={ handleDeptIdChange}
     title={handleStaffTitleChange}
     closeModel={handleStaffUpdateCloseModel}
-    StaffupdateApi = {handleStaffUpdateApi} />}
+    StaffupdateApi = {handleStaffUpdateApi} 
+    />
+    }
+    {/* Update department */}
     {
       updateDeptModal && 
       <DeptUpdateModal
@@ -329,6 +333,8 @@ const handleDeptManagerChange = (event) => {
       closeModel={handleDeptUpdateCloseModel}
       />
     }
+      {/* Creating new */}
+
     {/**
      * create new Modals
      */}
