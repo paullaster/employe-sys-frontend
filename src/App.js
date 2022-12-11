@@ -245,7 +245,8 @@ const handleNewStaffApi = () => {
   })
   .then ( (resp) => resp.json ())
   .then ( (data) => {
-    console.log (data) 
+    //console.log (data) 
+    setIsSuccess (data.message);
   }
   )
   .catch ( (err) => {
@@ -268,7 +269,8 @@ const handleNewDeptApi = () => {
   })
   .then ( (resp) => resp.json ())
   .then ( (data) => {
-    console.log (data) 
+    //console.log (data) 
+    setIsSuccess (data.message);
   }
   )
   .catch ( (err) => {
