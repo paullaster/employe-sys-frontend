@@ -91,17 +91,19 @@
 .modal-container-dept_update {
     background-color: rgb(1, 9, 16) !important;
     position: absolute;
-    top: -65em;
-    left: 10% !important;
-    width: 70% !important;
-    padding-left: 100px !important;
+    top: -35em;
+    left: 25% !important;
+    width: 25% !important;
+    padding-left: 180px !important;
     padding-bottom: 50px !important;
     border-radius: 20px !important;
 }
 .modal-container-dept_update > 
 .modal-body > form {
     display: grid !important;
-    grid-template-columns: 50% 50% !important;
+    grid-template-rows: auto !important;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .modal-container-dept_update > 
 .modal-body > form > label {
@@ -109,20 +111,23 @@
 }
 .modal-container-dept_update > 
 .modal-body > form > label > span {
-    margin-left: -440px !important;
-    text-align: justify;
-    margin-bottom: -45px !important;
+    margin-right: 500px !important;
+    background-color: blue;
+    margin-bottom: -10px !important;
+    display: block;
+    width: 200px !important;
 }
 .modal-container-dept_update > 
 .modal-body > form > label > input {
     width: 50% !important;
-    display: inline;
+    display: block;
+    background-color: red;
+    margin-left: -480px;
 }
 .modal-container-dept_update > 
 .modal-footer > button {
     width: 250px !important;
-    margin-top: -40px !important;
-    margin-left: 540px !important;
+    margin-left: 10px !important;
     background-color: rgb(53, 0, 246);
 }
 .modal-container-dept_update > 
