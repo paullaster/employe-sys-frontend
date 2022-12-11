@@ -19,7 +19,7 @@ const CreateNewDeptModal = ({deptId, deptName, deptManager, closeModel, createNe
                       </Form>
                     </div>
                     <div className="modal-footer">
-                        <Button onClick={()=> {closeModel (); createNewDept ();}}>Update</Button>
+                        <Button onClick={()=> {closeModel (); createNewDept ();}}>Add department</Button>
                     </div>
                   </div>
                 </div>
