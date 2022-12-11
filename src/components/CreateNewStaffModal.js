@@ -8,7 +8,7 @@ const CreateNewStaffModal = (
       deptId, title, startDate, closeModel, createNewStaff }) => {
   return (
     <div className="modal">
-      <div className="modal-container-staff_update">
+      <div className="modal-container-staff_createnew">
         <div className="modal-header">
           <div className="closeModel" onClick={closeModel}>&times;</div>
         </div>
@@ -21,6 +21,7 @@ const CreateNewStaffModal = (
             <LabelInput handleChange={supervisor}>Supervisor</LabelInput>
             <LabelInput type='number' handleChange={salary}>Salary</LabelInput>
             <LabelInput handleChange={title}>Title</LabelInput>
+            <LabelInput type='date' handleChange={startDate}>Start Date</LabelInput>
           </Form>
         </div>
         <div className="modal-footer">
