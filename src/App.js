@@ -262,21 +262,53 @@ const handleDeptManagerChange = (event) => {
 };
   return (
     <>
+    {
+      /**
+       * Staff Component
+       */
+    }
     <Staff 
     staffs={staffs}
     newstaff={handleNewStaffModal} 
     update={handleStaffUpdate} 
     onClick={handleDelete}
     />
-    <Departments departments = {departments} update={handleDeptUpdate} onClick={handleDeptDelete}/>
+    {
+      /**
+       * Department Component
+       */
+    }
+    <Departments 
+    departments = {departments} 
+    update={handleDeptUpdate} 
+    onClick={handleDeptDelete}
+    />
     {/**
      * Delete Modals
      */}
-    {openDeleteModel && <DeleteModal handleChange={handleChange} closeModel={handleCloseModal} callDeleteApi={handleDeleteApi}/>}
-    {openDeptDeleteModel && <DeleteDeptModal handleChange={handleChange} closeModel={handleDeptCloseModal} callDeleteApi={handleDeptDeleteApi}/>}
+    {/* 
+      Delete Staff
+    */}
+    {openDeleteModel && 
+    <DeleteModal 
+    handleChange={handleChange} 
+    closeModel={handleCloseModal} 
+    callDeleteApi={handleDeleteApi}
+    />
+    }
+    {/* Delete Department */}
+    {openDeptDeleteModel && 
+    <DeleteDeptModal 
+    handleChange={handleChange} 
+    closeModel={handleDeptCloseModal} 
+    callDeleteApi={handleDeptDeleteApi}
+    />
+    }
+
     {/**
      * update Modals
      */}
+     
     {updateStaffModel && <StaffUpdateModal
     staffid={handleStaffIdChange}
     fname={handleStaffFNameChange} 
