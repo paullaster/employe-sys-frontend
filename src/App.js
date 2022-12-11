@@ -231,22 +231,22 @@ const handleNewStaffApi = () => {
 };
 
 //Handdling user inputs
-const handleTitleUpdateChange = (event) => {
+const handleStaffTitleChange = (event) => {
   setTitle (event.target.value);
 };
-const handleLnameUpdateChange = (event) => {
+const handleStaffLNameChange = (event) => {
   setLname (event.target.value);
 };
-const handleFnameUpdateChange = (event) => {
+const handleStaffFNameChange = (event) => {
   setFname (event.target.value);
 };
-const handleStaffIdUpdateChange = (event) => {
+const handleStaffIdChange = (event) => {
   setStaffId (event.target.value);
 };
-const handleSalaryUpdateChange = (event) => {
+const handleStaffSalaryChange = (event) => {
   setSalary (event.target.value);
 };
-const handleSupervisorUpdateChange = (event) => {
+const handleStaffSupervisorChange = (event) => {
   setSupervisor (event.target.value);
 };
 
@@ -278,13 +278,13 @@ const handleDeptManagerChange = (event) => {
      * update Modals
      */}
     {updateStaffModel && <StaffUpdateModal
-    staffid={handleStaffIdUpdateChange}
-    fname={handleFnameUpdateChange} 
-    lname={handleLnameUpdateChange}
-    salary={handleSalaryUpdateChange}
-    supervisor={handleSupervisorUpdateChange}
+    staffid={handleStaffIdChange}
+    fname={handleStaffFNameChange} 
+    lname={handleStaffLNameChange}
+    salary={handleStaffSalaryChange}
+    supervisor={handleStaffSupervisorChange}
     deptId={ handleDeptIdUpdateChange}
-    title={handleTitleUpdateChange}
+    title={handleStaffTitleChange}
     closeModel={handleStaffUpdateCloseModel}
     StaffupdateApi = {handleStaffUpdateApi} />}
     {
@@ -303,13 +303,13 @@ const handleDeptManagerChange = (event) => {
      {
       NewStaffModal && 
       <CreateNewStaffModal
-      staffid={staffId}
-       fname={fname}
-        lname={lname}
-        supervisor={supervisor}
-        salary={salary} 
-        deptId={deptId}
-       title={title}
+      staffid={handleStaffIdChange}
+       fname={handleStaffFNameChange}
+        lname={handleStaffLNameChange}
+        supervisor={handleStaffSupervisorChange}
+        salary={handleStaffSalaryChange} 
+        deptId={handleDeptIdUpdateChange}
+       title={handleStaffTitleChange}
       closeModel={handleNewStaffCloseModal}
       createNewStaff={handleNewStaffApi}
       />
