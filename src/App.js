@@ -250,11 +250,11 @@ const handleStaffSupervisorChange = (event) => {
   setSupervisor (event.target.value);
 };
 
-const handleDeptIdUpdateChange = (event) => {
+const handleDeptIdChange = (event) => {
   setDeptId (event.target.value);
 };
 
-const handleDeptNameChange = (event) => {
+const handleDeptNameChane = (event) => {
   setDeptName (event.target.value);
 };
 const handleDeptManagerChange = (event) => {
@@ -283,15 +283,15 @@ const handleDeptManagerChange = (event) => {
     lname={handleStaffLNameChange}
     salary={handleStaffSalaryChange}
     supervisor={handleStaffSupervisorChange}
-    deptId={ handleDeptIdUpdateChange}
+    deptId={ handleDeptIdChange}
     title={handleStaffTitleChange}
     closeModel={handleStaffUpdateCloseModel}
     StaffupdateApi = {handleStaffUpdateApi} />}
     {
       updateDeptModal && 
       <DeptUpdateModal
-      deptId={handleDeptIdUpdateChange}
-      deptName={handleDeptNameChange}
+      deptId={handleDeptIdChange}
+      deptName={handleDeptNameChane}
       deptManager={handleDeptManagerChange}
       deptupdateApi={handleDeptUpdateApi}
       closeModel={handleDeptUpdateCloseModel}
@@ -308,7 +308,7 @@ const handleDeptManagerChange = (event) => {
         lname={handleStaffLNameChange}
         supervisor={handleStaffSupervisorChange}
         salary={handleStaffSalaryChange} 
-        deptId={handleDeptIdUpdateChange}
+        deptId={handleDeptIdChange}
        title={handleStaffTitleChange}
       closeModel={handleNewStaffCloseModal}
       createNewStaff={handleNewStaffApi}
