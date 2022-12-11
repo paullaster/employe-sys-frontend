@@ -55,7 +55,7 @@ const fetchDepartments = () => {
   });
 };
 
-
+// Fetch Staff from backend API
 const fetchStaffs = () => {
   fetch ( 'http://localhost:4000/staff/search/all', {
     method: 'GET',
@@ -68,6 +68,7 @@ const fetchStaffs = () => {
   } )
   .then ( (data) => {
     setStaffs (data.data);
+    setIsSuccess (data.message);
   } )
   .catch ( (error) => {
     setIsError ( true);
